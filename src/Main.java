@@ -9,10 +9,10 @@
 в конце семинара объяснение
  */
 
-public class Main {
+public class Main  {
 	public static void main(String[] args) {
-		BData bData = new BData();
-//		bData.setId(bData.id())
-		Film film1 = new Film();
+		System.out.println("Hello, world!\n");
+		Application application = new Application();
+		application.runApplication();
 	}
 }

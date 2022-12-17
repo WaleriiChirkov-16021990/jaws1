@@ -10,28 +10,32 @@
  */
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Objects;
 
 public class Film {
-	int id;
-	String name;
-	String genre;
-	ArrayList<String> mainRole;
-	ArrayList<String> filmDirector;
-	Date date;
+	private int id;
+	private String name;
+	private String genre;
+	private ArrayList<String> mainRole;
+	private String filmDirector;
 	
 	public Film() {
 	}
 	
-	public Film(int id, String name, String genre, ArrayList<String> mainRole, ArrayList<String> filmDirector, Date date) {
+	public Film(int id, String name, String genre, ArrayList<String> mainRole, String filmDirector) {
 		this.id = id;
 		this.name = name;
 		this.genre = genre;
 		this.mainRole = mainRole;
 		this.filmDirector = filmDirector;
-		this.date = date;
 	}
+//	public Film(int id, String name, String genre, ArrayList<String> mainRole, String filmDirector) {
+//		this.id = id;
+//		this.name = name;
+//		this.genre = genre;
+//		this.mainRole = mainRole;
+//		this.filmDirector = filmDirector;
+//	}
 	
 	@Override
 	public String toString() {
@@ -41,7 +45,6 @@ public class Film {
 				", genre='" + genre + '\'' +
 				", mainRole=" + mainRole +
 				", filmDirector=" + filmDirector +
-				", date=" + date +
 				'}';
 	}
 	
@@ -50,12 +53,12 @@ public class Film {
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (!(o instanceof Film film)) return false;
-		return getId() == film.getId() && getName().equals(film.getName()) && getGenre().equals(film.getGenre()) && Objects.equals(getMainRole(), film.getMainRole()) && Objects.equals(getFilmDirector(), film.getFilmDirector()) && Objects.equals(getDate(), film.getDate());
+		return getId() == film.getId() && getName().equals(film.getName()) && getGenre().equals(film.getGenre()) && Objects.equals(getMainRole(), film.getMainRole()) && Objects.equals(getFilmDirector(), film.getFilmDirector());
 	}
 	
 	@Override
 	public int hashCode() {
-		return Objects.hash(getId(), getName(), getGenre(), getMainRole(), getFilmDirector(), getDate());
+		return Objects.hash(getId(), getName(), getGenre(), getMainRole(), getFilmDirector());
 	}
 	
 	public int getId() {
@@ -90,19 +93,12 @@ public class Film {
 		this.mainRole = mainRole;
 	}
 	
-	public ArrayList<String> getFilmDirector() {
+	public String getFilmDirector() {
 		return filmDirector;
 	}
 	
-	public void setFilmDirector(ArrayList<String> filmDirector) {
+	public void setFilmDirector(String filmDirector) {
 		this.filmDirector = filmDirector;
 	}
 	
-	public Date getDate() {
-		return date;
-	}
-	
-	public void setDate(Date date) {
-		this.date = date;
-	}
 }

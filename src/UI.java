@@ -16,8 +16,8 @@ public class UI {
 	}
 	
 	
-	public Map<Integer, String> getUserUI() {
-		return userUI;
+	public String getUserUI(int level) {
+		return userUI.get(level);
 	}
 	
 	public void setUserUI(Map<Integer, String> userUI) {
