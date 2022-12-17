@@ -11,6 +11,8 @@
 
 public class Main {
 	public static void main(String[] args) {
-		System.out.println("Hello world!");
+		BData bData = new BData();
+//		bData.setId(bData.id())
+		Film film1 = new Film();
 	}
 }

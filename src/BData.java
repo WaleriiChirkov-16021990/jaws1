@@ -13,9 +13,10 @@ import java.util.HashSet;
 import java.util.Map;
 
 public class BData {
-	HashSet<Film> collection;
-	Map<String,Map<Character, ArrayList<String>>> alfaBet;
-	HashSet<Integer> id;
+//	public Object Film;
+	private HashSet<Film> collection;
+	private Map<String,Map<Character, ArrayList<String>>> alfaBet;
+	private HashSet<Integer> id;
 	
 	
 	@Override
