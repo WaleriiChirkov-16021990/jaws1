@@ -29,13 +29,7 @@ public class Film {
 		this.mainRole = mainRole;
 		this.filmDirector = filmDirector;
 	}
-//	public Film(int id, String name, String genre, ArrayList<String> mainRole, String filmDirector) {
-//		this.id = id;
-//		this.name = name;
-//		this.genre = genre;
-//		this.mainRole = mainRole;
-//		this.filmDirector = filmDirector;
-//	}
+
 	
 	@Override
 	public String toString() {

@@ -27,27 +27,16 @@ public class Checker {
 		return Objects.hash(input);
 	}
 	
-	@Override
-	public String toString() {
-		return "Checker{" +
-				"input='" + input + '\'' +
-				'}';
+	public boolean isInteger(){
+		return input.matches("^\\d$");
 	}
 	
+	public  boolean isCoincidence(String character){
+		String[] name = this.input.split("");
+		return name[0].toLowerCase().equals(character.toLowerCase());
+	}
 	
-//	@Override
-//	public String toString() {
-//		return "Checker{" +
-//				"input='" + input + '\'' +
-//				'}';
-//	}
-
-
-//	@Override
-//	public String toString() {
-//		final StringBuffer sb = new StringBuffer("Checker{");
-//		sb.append("input='").append(input).append('\'');
-//		sb.append('}');
-//		return sb.toString();
-//	}
+	public boolean isOneLetter(){
+		return this.input.matches("[a-zа-яA-ZА-Я]$");
+	}
 }

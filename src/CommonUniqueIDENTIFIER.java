@@ -3,20 +3,21 @@ import java.util.Random;
 
 public class CommonUniqueIDENTIFIER extends BData{
 	private int uniqueID = -1;
+	private static HashSet<Integer> id = new HashSet<>();
 	
-	public CommonUniqueIDENTIFIER(int uniqueID, BData data) {
-			if (!data.id().contains(uniqueID)) {
+	public CommonUniqueIDENTIFIER(int uniqueID) {
+			if (!id.contains(uniqueID)) {
 				this.uniqueID = uniqueID;
-				data.id().add(uniqueID);
+				id.add(uniqueID);
 			} else System.out.printf("Error!\nИдентификатор '%s' уже занят!\n", uniqueID);
 	}
 	
-	public CommonUniqueIDENTIFIER(BData data) {
+	public CommonUniqueIDENTIFIER() {
 		Random rnd = new Random();
 		int rndId = rnd.nextInt(1000000);
 		while(true) {
-			if(!data.id().contains(rndId)){
-				data.id().add(rndId);
+			if(!id.contains(rndId)){
+				id.add(rndId);
 				break;
 			}
 			rndId = rnd.nextInt(1000000);
@@ -26,5 +27,8 @@ public class CommonUniqueIDENTIFIER extends BData{
 	
 	public int getUniqueID() {
 		return uniqueID;
+	}
+	public static HashSet<Integer> getId() {
+		return id;
 	}
 }
