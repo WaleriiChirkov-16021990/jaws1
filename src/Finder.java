@@ -82,7 +82,7 @@ public class Finder {
 		return sortedAlfaBet;
 	}
 	
-	public BData Filter(BData bData){
+	public BData filter(BData bData){
 		if(this.id > 0) {
 			return getFindFilmID(bData, getId());
 		} else if (!this.findName.equalsIgnoreCase("")) {

@@ -33,7 +33,7 @@ public class Checker {
 	
 	public  boolean isCoincidence(String character){
 		String[] name = this.input.split("");
-		return name[0].toLowerCase().equals(character.toLowerCase());
+		return name[0].equalsIgnoreCase(character.toLowerCase());
 	}
 	
 	public boolean isOneLetter(){

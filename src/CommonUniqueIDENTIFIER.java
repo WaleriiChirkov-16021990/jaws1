@@ -1,7 +1,7 @@
 import java.util.HashSet;
 import java.util.Random;
 
-public class CommonUniqueIDENTIFIER extends BData{
+public class CommonUniqueIDENTIFIER {
 	private int uniqueID = -1;
 	private static HashSet<Integer> id = new HashSet<>();
 	
